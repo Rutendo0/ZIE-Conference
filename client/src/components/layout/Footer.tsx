@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="bg-neutral-900 text-neutral-300 py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <img 
               src="https://www.zie.co.zw/storage/app/public/logo/logo-1682675626.png" 
@@ -21,17 +21,14 @@ export default function Footer() {
               The Zimbabwe Institution of Engineers promotes excellence in the engineering profession through regulation, research, and professional development.
             </p>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" className="text-neutral-300 hover:text-white transition-all" aria-label="Facebook">
+              <a href="https://www.facebook.com/zie.org.zw" className="text-neutral-300 hover:text-white transition-all" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="https://twitter.com" className="text-neutral-300 hover:text-white transition-all" aria-label="Twitter">
+              <a href="https://x.com/TheZimbabweIns1" className="text-neutral-300 hover:text-white transition-all" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="https://linkedin.com" className="text-neutral-300 hover:text-white transition-all" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/the-zimbabwe-institution-of-engineers-04b651206/" className="text-neutral-300 hover:text-white transition-all" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="https://instagram.com" className="text-neutral-300 hover:text-white transition-all" aria-label="Instagram">
-                <Instagram className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -68,32 +65,6 @@ export default function Footer() {
                 <button onClick={() => handleNavClick('register')} className="hover:text-white transition-all">
                   Register
                 </button>
-              </li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="font-heading font-bold text-white text-lg mb-4">Important Information</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="#" className="hover:text-white transition-all">
-                  Conference Program
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white transition-all">
-                  Workshop Details
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white transition-all">
-                  Terms & Conditions
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white transition-all">
-                  Privacy Policy
-                </Link>
               </li>
             </ul>
           </div>
