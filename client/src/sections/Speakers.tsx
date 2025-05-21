@@ -136,17 +136,17 @@ export default function Speakers() {
                 <p className="text-secondary font-semibold">{speaker.title}</p>
                 <div className="flex mt-3 space-x-3">
                   {speaker.socials.linkedin && (
-                    <a href={speaker.socials.linkedin} className="text-white hover:text-secondary" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/the-zimbabwe-institution-of-engineers-04b651206/" className="text-white hover:text-secondary" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                       <Linkedin className="h-5 w-5" />
                     </a>
                   )}
                   {speaker.socials.twitter && (
-                    <a href={speaker.socials.twitter} className="text-white hover:text-secondary" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                    <a href="https://x.com/TheZimbabweIns1" className="text-white hover:text-secondary" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
                       <Twitter className="h-5 w-5" />
                     </a>
                   )}
                   {speaker.socials.website && (
-                    <a href={speaker.socials.website} className="text-white hover:text-secondary" aria-label="Website" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.zie.co.zw" className="text-white hover:text-secondary" aria-label="Website" target="_blank" rel="noopener noreferrer">
                       <Globe className="h-5 w-5" />
                     </a>
                   )}

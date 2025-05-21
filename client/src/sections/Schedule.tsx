@@ -209,9 +209,9 @@ export default function Schedule() {
         </div>
         
         <div className="text-center mt-12">
-          <a href="/zie-conference-schedule-2025.pdf" download>
+          <a href="mailto:conference2025@zie.co.zw?subject=Request%20for%20Conference%20Schedule">
             <Button className="inline-block px-8 py-3 bg-primary text-white font-bold rounded-full hover:bg-opacity-90 transition-all">
-              Download Full Schedule
+              Request Full Schedule
             </Button>
           </a>
         </div>
