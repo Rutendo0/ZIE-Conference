@@ -34,20 +34,41 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Registration API endpoint
   app.post("/api/register", async (req, res) => {
     try {
-      const { tierId } = req.body;
+      const registrationData = insertRegistrationSchema.parse(req.body);
       
-      // In a real application, we would collect more information
-      // For now, we'll just acknowledge the tier selection
-      res.status(200).json({ 
+      // Generate a ticket number (format: ZIE-2025-XXXXX)
+      const ticketNumber = `ZIE-2025-${Math.floor(10000 + Math.random() * 90000)}`;
+      
+      // Create the registration with ticket information
+      const registration = await storage.createRegistration({
+        ...registrationData,
+        ticketNumber,
+        ticketIssued: true
+      });
+      
+      res.status(201).json({ 
         success: true, 
-        message: "Registration interest recorded", 
-        tierId 
+        message: "Registration successful! Your ticket has been issued.", 
+        registration: {
+          id: registration.id,
+          name: registration.name,
+          email: registration.email,
+          ticketNumber: registration.ticketNumber,
+          pricingTier: registration.pricingTier
+        }
       });
     } catch (error) {
-      res.status(500).json({ 
-        success: false, 
-        message: "An error occurred during registration" 
-      });
+      if (error instanceof Error) {
+        res.status(400).json({ 
+          success: false, 
+          message: error.message || "Invalid registration data" 
+        });
+      } else {
+        res.status(500).json({ 
+          success: false, 
+          message: "An error occurred during registration" 
+        });
+      }
     }
   });
 

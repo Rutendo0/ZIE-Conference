@@ -118,15 +118,20 @@ export class MemStorage implements IStorage {
     return this.registrations.get(id);
   }
   
-  async createRegistration(insertRegistration: InsertRegistration): Promise<Registration> {
+  async createRegistration(insertRegistration: any): Promise<Registration> {
     const id = this.registrationIdCounter++;
     const createdAt = new Date();
+    
+    // Handle the new ticket fields
     const registration: Registration = { 
       ...insertRegistration, 
-      id, 
-      paymentStatus: "pending", 
+      id,
+      paymentStatus: "pending",
+      ticketNumber: insertRegistration.ticketNumber || null,
+      ticketIssued: insertRegistration.ticketIssued || false,
       createdAt 
     };
+    
     this.registrations.set(id, registration);
     return registration;
   }

@@ -24,12 +24,16 @@ export const registrations = pgTable("registrations", {
   jobTitle: text("job_title"),
   pricingTier: text("pricing_tier").notNull(),
   paymentStatus: text("payment_status").default("pending"),
+  ticketNumber: text("ticket_number"),
+  ticketIssued: boolean("ticket_issued").default(false),
   createdAt: timestamp("created_at").defaultNow(),
 });
 
 export const insertRegistrationSchema = createInsertSchema(registrations).omit({
   id: true,
   paymentStatus: true,
+  ticketNumber: true,
+  ticketIssued: true,
   createdAt: true,
 });
 

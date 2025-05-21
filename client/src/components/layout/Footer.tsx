@@ -77,22 +77,12 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="#" className="hover:text-white transition-all">
-                  Call for Papers
+                  Conference Program
                 </Link>
               </li>
               <li>
                 <Link href="#" className="hover:text-white transition-all">
-                  Accommodation
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white transition-all">
-                  Travel Info
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white transition-all">
-                  FAQ
+                  Workshop Details
                 </Link>
               </li>
               <li>

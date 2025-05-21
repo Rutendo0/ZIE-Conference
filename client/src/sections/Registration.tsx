@@ -1,8 +1,13 @@
-import { Check, X } from "lucide-react";
+import { useState } from "react";
+import { Check, X, Ticket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Card, CardContent } from "@/components/ui/card";
 
 interface PricingTier {
   id: string;
@@ -14,6 +19,23 @@ interface PricingTier {
     included: boolean;
   }[];
   highlighted?: boolean;
+}
+
+interface RegistrationFormData {
+  name: string;
+  email: string;
+  phone: string;
+  organization: string;
+  jobTitle: string;
+  pricingTier: string;
+}
+
+interface TicketData {
+  id: number;
+  name: string;
+  email: string;
+  ticketNumber: string;
+  pricingTier: string;
 }
 
 const pricingTiers: PricingTier[] = [

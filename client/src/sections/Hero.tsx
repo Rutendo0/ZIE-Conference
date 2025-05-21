@@ -43,13 +43,6 @@ export default function Hero() {
             >
               Register Now
             </Button>
-            <Button 
-              variant="outline"
-              className="px-8 py-3 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-primary transition-all text-lg"
-              onClick={() => handleClick('about')}
-            >
-              Learn More
-            </Button>
           </div>
         </div>
       </div>
