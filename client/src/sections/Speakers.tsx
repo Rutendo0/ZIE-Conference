@@ -124,7 +124,7 @@ export default function Speakers() {
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {displayedSpeakers.map(speaker => (
+          {displaySpeakers.map(speaker => (
             <div key={speaker.id} className="speaker-card group relative rounded-lg overflow-hidden">
               <img 
                 src={speaker.image} 
