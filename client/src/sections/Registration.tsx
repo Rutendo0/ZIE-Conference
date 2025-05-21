@@ -86,16 +86,43 @@ const pricingTiers: PricingTier[] = [
 
 export default function Registration() {
   const { toast } = useToast();
+  const [selectedTier, setSelectedTier] = useState<string | null>(null);
+  const [showRegistrationForm, setShowRegistrationForm] = useState(false);
+  const [showTicket, setShowTicket] = useState(false);
+  const [ticketData, setTicketData] = useState<TicketData | null>(null);
+  
+  const [formData, setFormData] = useState<RegistrationFormData>({
+    name: "",
+    email: "",
+    phone: "",
+    organization: "",
+    jobTitle: "",
+    pricingTier: ""
+  });
+  
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
   const registration = useMutation({
-    mutationFn: async (tierId: string) => {
-      return await apiRequest('POST', '/api/register', { tierId });
+    mutationFn: async (data: RegistrationFormData) => {
+      return await apiRequest('POST', '/api/register', data);
     },
-    onSuccess: () => {
+    onSuccess: (response: any) => {
       toast({
-        title: "Registration Interest Recorded",
-        description: "Thank you for your interest. We'll contact you with payment details.",
+        title: "Registration Successful",
+        description: "Your conference ticket has been issued!",
       });
+      // Store the ticket information
+      if (response && response.registration) {
+        setTicketData(response.registration);
+        setShowRegistrationForm(false);
+        setShowTicket(true);
+      }
     },
     onError: (error) => {
       toast({
@@ -106,8 +133,23 @@ export default function Registration() {
     }
   });
 
-  const handleRegister = (tierId: string) => {
-    registration.mutate(tierId);
+  const handleTierSelect = (tierId: string) => {
+    setSelectedTier(tierId);
+    setFormData(prev => ({
+      ...prev,
+      pricingTier: tierId
+    }));
+    setShowRegistrationForm(true);
+  };
+  
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    registration.mutate(formData);
+  };
+  
+  const handleCloseTicket = () => {
+    setShowTicket(false);
+    setSelectedTier(null);
   };
 
   return (
@@ -156,7 +198,7 @@ export default function Registration() {
                   ))}
                 </ul>
                 <Button 
-                  onClick={() => handleRegister(tier.id)}
+                  onClick={() => handleTierSelect(tier.id)}
                   disabled={registration.isPending}
                   className={`
                     inline-block w-full px-6 py-3 font-bold rounded-full hover:bg-opacity-90 transition-all
@@ -165,12 +207,166 @@ export default function Registration() {
                       : 'bg-accent text-white'}
                   `}
                 >
-                  {registration.isPending ? "Processing..." : "Register Now"}
+                  Register Now
                 </Button>
               </div>
             </div>
           ))}
         </div>
+        
+        {/* Registration Form Dialog */}
+        <Dialog open={showRegistrationForm} onOpenChange={setShowRegistrationForm}>
+          <DialogContent className="sm:max-w-md">
+            <DialogHeader>
+              <DialogTitle className="text-center text-2xl font-bold">Complete Registration</DialogTitle>
+              <DialogDescription className="text-center">
+                Please provide your information to complete your registration and receive your ticket.
+              </DialogDescription>
+            </DialogHeader>
+            
+            <form onSubmit={handleSubmit} className="space-y-4 py-4">
+              <div className="grid gap-4">
+                <div className="grid gap-2">
+                  <Label htmlFor="name">Full Name</Label>
+                  <Input
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    placeholder="Your full name"
+                    required
+                  />
+                </div>
+                
+                <div className="grid gap-2">
+                  <Label htmlFor="email">Email Address</Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    placeholder="Your email"
+                    required
+                  />
+                </div>
+                
+                <div className="grid gap-2">
+                  <Label htmlFor="phone">Phone Number</Label>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    placeholder="Your phone number"
+                  />
+                </div>
+                
+                <div className="grid gap-2">
+                  <Label htmlFor="organization">Organization</Label>
+                  <Input
+                    id="organization"
+                    name="organization"
+                    value={formData.organization}
+                    onChange={handleInputChange}
+                    placeholder="Your organization"
+                  />
+                </div>
+                
+                <div className="grid gap-2">
+                  <Label htmlFor="jobTitle">Job Title</Label>
+                  <Input
+                    id="jobTitle"
+                    name="jobTitle"
+                    value={formData.jobTitle}
+                    onChange={handleInputChange}
+                    placeholder="Your job title"
+                  />
+                </div>
+              </div>
+              
+              <div className="flex justify-end">
+                <Button 
+                  type="submit" 
+                  disabled={registration.isPending}
+                  className="px-6 py-2 bg-primary text-white hover:bg-opacity-90"
+                >
+                  {registration.isPending ? "Processing..." : "Complete Registration"}
+                </Button>
+              </div>
+            </form>
+          </DialogContent>
+        </Dialog>
+        
+        {/* Ticket Display Dialog */}
+        <Dialog open={showTicket} onOpenChange={setShowTicket}>
+          <DialogContent className="sm:max-w-md">
+            <DialogHeader>
+              <DialogTitle className="text-center text-2xl font-bold">Your Conference Ticket</DialogTitle>
+            </DialogHeader>
+            
+            {ticketData && (
+              <div>
+                <Card className="border-2 border-primary overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="bg-primary text-white px-4 py-2 flex justify-between items-center">
+                      <h3 className="font-bold text-lg">ZIE Conference 2025</h3>
+                      <Ticket className="h-5 w-5" />
+                    </div>
+                    
+                    <div className="p-6 space-y-4">
+                      <div className="text-center">
+                        <div className="bg-secondary/20 py-3 rounded-md font-mono tracking-wide font-bold">
+                          {ticketData.ticketNumber}
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-3">
+                        <div>
+                          <p className="text-sm text-gray-500">Attendee</p>
+                          <p className="font-bold">{ticketData.name}</p>
+                        </div>
+                        
+                        <div>
+                          <p className="text-sm text-gray-500">Email</p>
+                          <p>{ticketData.email}</p>
+                        </div>
+                        
+                        <div>
+                          <p className="text-sm text-gray-500">Ticket Type</p>
+                          <p>{pricingTiers.find(tier => tier.id === ticketData.pricingTier)?.name || ticketData.pricingTier}</p>
+                        </div>
+                        
+                        <div>
+                          <p className="text-sm text-gray-500">Event Date</p>
+                          <p>October 15-17, 2025</p>
+                        </div>
+                        
+                        <div>
+                          <p className="text-sm text-gray-500">Venue</p>
+                          <p>Harare International Conference Centre</p>
+                        </div>
+                      </div>
+                      
+                      <div className="border-t border-gray-200 pt-4 text-sm text-gray-500">
+                        <p>Please bring this ticket (printed or digital) to the conference for check-in.</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+                
+                <div className="flex justify-center mt-4">
+                  <Button 
+                    onClick={handleCloseTicket}
+                    className="px-6 py-2 bg-primary text-white hover:bg-opacity-90"
+                  >
+                    Close
+                  </Button>
+                </div>
+              </div>
+            )}
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );
