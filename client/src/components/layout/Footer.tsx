@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <img 
-              src="https://www.zie.co.zw/storage/app/public/logo/logo-1682675626.png" 
+              src="https://zie.org.zw/wp-content/uploads/2023/04/Logo-2.png" 
               alt="ZIE Logo" 
               className="h-16 mb-4"
             />
