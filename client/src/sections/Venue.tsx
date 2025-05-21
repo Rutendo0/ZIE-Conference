@@ -68,9 +68,11 @@ export default function Venue() {
             </div>
             
             <div className="mt-8">
-              <Button className="inline-block px-6 py-2 bg-primary text-white font-bold rounded-full hover:bg-opacity-90 transition-all">
-                Get Directions
-              </Button>
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Harare+International+Conference+Centre+Zimbabwe" target="_blank" rel="noopener noreferrer">
+                <Button className="inline-block px-6 py-2 bg-primary text-white font-bold rounded-full hover:bg-opacity-90 transition-all">
+                  Get Directions
+                </Button>
+              </a>
             </div>
           </div>
         </div>

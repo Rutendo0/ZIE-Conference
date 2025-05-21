@@ -80,9 +80,11 @@ export default function Sponsors() {
         ))}
         
         <div className="text-center mt-16">
-          <Button className="inline-block px-8 py-3 bg-primary text-white font-bold rounded-full hover:bg-opacity-90 transition-all">
-            Become a Sponsor
-          </Button>
+          <a href="mailto:conference2025@zie.co.zw?subject=Sponsorship%20Inquiry">
+            <Button className="inline-block px-8 py-3 bg-primary text-white font-bold rounded-full hover:bg-opacity-90 transition-all">
+              Become a Sponsor
+            </Button>
+          </a>
         </div>
       </div>
     </section>

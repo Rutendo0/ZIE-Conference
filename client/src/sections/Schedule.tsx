@@ -209,9 +209,11 @@ export default function Schedule() {
         </div>
         
         <div className="text-center mt-12">
-          <Button className="inline-block px-8 py-3 bg-primary text-white font-bold rounded-full hover:bg-opacity-90 transition-all">
-            Download Full Schedule
-          </Button>
+          <a href="/zie-conference-schedule-2025.pdf" download>
+            <Button className="inline-block px-8 py-3 bg-primary text-white font-bold rounded-full hover:bg-opacity-90 transition-all">
+              Download Full Schedule
+            </Button>
+          </a>
         </div>
       </div>
     </section>
