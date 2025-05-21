@@ -1,0 +1,58 @@
+import { Countdown } from "@/components/ui/countdown";
+import { Button } from "@/components/ui/button";
+import { scrollToElement } from "@/lib/utils";
+
+export default function Hero() {
+  const conferenceDate = new Date("November 15, 2023 09:00:00");
+  
+  const handleClick = (id: string) => {
+    scrollToElement(id);
+  };
+
+  return (
+    <section id="home" className="relative">
+      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div 
+        className="relative min-h-screen flex items-center justify-center" 
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')",
+          backgroundSize: "cover",
+          backgroundPosition: "center"
+        }}
+      >
+        <div className="container mx-auto px-4 py-20 text-center text-white">
+          <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-4 leading-tight">
+            Zimbabwe Institution of Engineers <br />International Conference 2023
+          </h1>
+          <p className="text-xl lg:text-2xl mb-8 max-w-3xl mx-auto">
+            Innovation & Sustainability in Engineering: Building Zimbabwe's Future
+          </p>
+          <p className="text-lg mb-12">
+            November 15-17, 2023 | Harare International Conference Centre
+          </p>
+          
+          {/* Countdown Timer */}
+          <div className="flex justify-center">
+            <Countdown date={conferenceDate} />
+          </div>
+          
+          <div className="mt-12 flex flex-col md:flex-row justify-center gap-4">
+            <Button 
+              className="px-8 py-3 bg-accent text-white font-bold rounded-full hover:bg-opacity-90 transition-all text-lg"
+              onClick={() => handleClick('register')}
+            >
+              Register Now
+            </Button>
+            <Button 
+              variant="outline"
+              className="px-8 py-3 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-primary transition-all text-lg"
+              onClick={() => handleClick('about')}
+            >
+              Learn More
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
