@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { scrollToElement } from "@/lib/utils";
 
 export default function Hero() {
-  const conferenceDate = new Date("November 15, 2023 09:00:00");
+  const conferenceDate = new Date("October 15, 2025 09:00:00");
   
   const handleClick = (id: string) => {
     scrollToElement(id);
@@ -22,13 +22,13 @@ export default function Hero() {
       >
         <div className="container mx-auto px-4 py-20 text-center text-white">
           <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-4 leading-tight">
-            Zimbabwe Institution of Engineers <br />International Conference 2023
+            Zimbabwe Institution of Engineers <br />International Conference 2025
           </h1>
           <p className="text-xl lg:text-2xl mb-8 max-w-3xl mx-auto">
             Innovation & Sustainability in Engineering: Building Zimbabwe's Future
           </p>
           <p className="text-lg mb-12">
-            November 15-17, 2023 | Harare International Conference Centre
+            October 15-17, 2025 | Harare International Conference Centre
           </p>
           
           {/* Countdown Timer */}

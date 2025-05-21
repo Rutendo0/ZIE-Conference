@@ -12,23 +12,23 @@ import { useEffect } from "react";
 export default function Home() {
   useEffect(() => {
     // Update page title
-    document.title = "ZIE International Conference 2023";
+    document.title = "ZIE International Conference 2025";
 
     // Add meta description for SEO
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Zimbabwe Institution of Engineers International Conference 2023. Join us for innovation & sustainability in engineering, building Zimbabwe's future. November 15-17, 2023.");
+      metaDescription.setAttribute("content", "Zimbabwe Institution of Engineers International Conference 2025. Join us for innovation & sustainability in engineering, building Zimbabwe's future. October 15-17, 2025.");
     } else {
       const newMetaDescription = document.createElement('meta');
       newMetaDescription.setAttribute('name', 'description');
-      newMetaDescription.setAttribute('content', "Zimbabwe Institution of Engineers International Conference 2023. Join us for innovation & sustainability in engineering, building Zimbabwe's future. November 15-17, 2023.");
+      newMetaDescription.setAttribute('content', "Zimbabwe Institution of Engineers International Conference 2025. Join us for innovation & sustainability in engineering, building Zimbabwe's future. October 15-17, 2025.");
       document.head.appendChild(newMetaDescription);
     }
 
     // Add Open Graph tags for social media sharing
     const ogTags = [
-      { property: 'og:title', content: 'ZIE International Conference 2023' },
-      { property: 'og:description', content: 'Join us for innovation & sustainability in engineering, building Zimbabwe\'s future. November 15-17, 2023.' },
+      { property: 'og:title', content: 'ZIE International Conference 2025' },
+      { property: 'og:description', content: 'Join us for innovation & sustainability in engineering, building Zimbabwe\'s future. October 15-17, 2025.' },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: window.location.href },
       { property: 'og:image', content: 'https://www.zie.co.zw/storage/app/public/logo/logo-1682675626.png' }

@@ -21,7 +21,7 @@ const pricingTiers: PricingTier[] = [
     id: "early-bird",
     name: "Early Bird",
     price: "$199",
-    deadline: "Available until September 15, 2023",
+    deadline: "Available until August 15, 2025",
     features: [
       { name: "Full conference access", included: true },
       { name: "Conference materials", included: true },
@@ -35,7 +35,7 @@ const pricingTiers: PricingTier[] = [
     id: "standard",
     name: "Standard",
     price: "$299",
-    deadline: "Available until November 1, 2023",
+    deadline: "Available until September 30, 2025",
     features: [
       { name: "Full conference access", included: true },
       { name: "Conference materials", included: true },
@@ -50,7 +50,7 @@ const pricingTiers: PricingTier[] = [
     id: "premium",
     name: "Premium",
     price: "$399",
-    deadline: "Available until November 10, 2023",
+    deadline: "Available until October 10, 2025",
     features: [
       { name: "Full conference access", included: true },
       { name: "Conference materials", included: true },

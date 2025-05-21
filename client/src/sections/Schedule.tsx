@@ -16,7 +16,7 @@ interface DaySchedule {
 
 const scheduleData: Record<string, DaySchedule> = {
   day1: {
-    date: "November 15, 2023",
+    date: "October 15, 2025",
     items: [
       {
         time: "08:00 - 09:00",
@@ -53,7 +53,7 @@ const scheduleData: Record<string, DaySchedule> = {
     ]
   },
   day2: {
-    date: "November 16, 2023",
+    date: "October 16, 2025",
     items: [
       {
         time: "08:30 - 09:00",
@@ -95,7 +95,7 @@ const scheduleData: Record<string, DaySchedule> = {
     ]
   },
   day3: {
-    date: "November 17, 2023",
+    date: "October 17, 2025",
     items: [
       {
         time: "08:30 - 09:00",
