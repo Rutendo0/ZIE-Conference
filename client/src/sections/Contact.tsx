@@ -152,7 +152,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-heading font-bold mb-1">Email</h4>
-                    <p className="text-neutral-600">conference2023@zie.co.zw</p>
+                    <p className="text-neutral-600">conference2025@zie.co.zw</p>
                   </div>
                 </div>
                 

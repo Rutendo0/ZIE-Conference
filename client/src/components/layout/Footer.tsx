@@ -125,7 +125,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-3 text-secondary" />
-                <span>conference2023@zie.co.zw</span>
+                <span>conference2025@zie.co.zw</span>
               </li>
               <li className="flex items-start">
                 <Clock className="h-5 w-5 mt-1 mr-3 text-secondary" />
@@ -136,7 +136,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-neutral-700 mt-10 pt-6 text-center">
-          <p>&copy; 2023 Zimbabwe Institution of Engineers. All Rights Reserved.</p>
+          <p>&copy; 2025 Zimbabwe Institution of Engineers. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
