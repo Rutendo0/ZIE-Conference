@@ -80,13 +80,13 @@ export default function Venue() {
         {/* Google Maps embed */}
         <div className="mt-16 h-96 rounded-lg shadow-lg overflow-hidden">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.427736973545!2d31.0475!3d-17.8252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDQ5JzMwLjciUyAzMcKwMDInNTAuOSJF!5e0!3m2!1sen!2s!4v1630000000000!5m2!1sen!2s" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3795.202334444593!2d25.855344!3d-17.924655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x194fe53c789d5ccb%3A0xf8f7ad4c5c2e8d52!2sElephant%20Hills%20Resort!5e0!3m2!1sen!2s!4v1630000000000!5m2!1sen!2s" 
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 
             allowFullScreen 
             loading="lazy"
-            title="Conference venue location"
+            title="Elephant Hills Resort location"
           ></iframe>
         </div>
       </div>
