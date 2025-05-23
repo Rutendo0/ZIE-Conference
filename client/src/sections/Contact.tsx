@@ -72,7 +72,7 @@ export default function Contact() {
             Have questions about the conference? Get in touch with our team
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <form 
@@ -91,7 +91,7 @@ export default function Contact() {
                   required
                 />
               </div>
-              
+
               <div className="mb-6">
                 <Label htmlFor="email" className="block text-neutral-700 font-bold mb-2">Email Address</Label>
                 <Input 
@@ -104,7 +104,7 @@ export default function Contact() {
                   required
                 />
               </div>
-              
+
               <div className="mb-6">
                 <Label htmlFor="subject" className="block text-neutral-700 font-bold mb-2">Subject</Label>
                 <Input 
@@ -117,7 +117,7 @@ export default function Contact() {
                   required
                 />
               </div>
-              
+
               <div className="mb-6">
                 <Label htmlFor="message" className="block text-neutral-700 font-bold mb-2">Message</Label>
                 <Textarea 
@@ -130,7 +130,7 @@ export default function Contact() {
                   required
                 />
               </div>
-              
+
               <Button 
                 type="submit" 
                 className="w-full px-6 py-3 bg-primary text-white font-bold rounded-full hover:bg-opacity-90 transition-all"
@@ -140,22 +140,29 @@ export default function Contact() {
               </Button>
             </form>
           </div>
-          
+
           <div>
             <div className="bg-white p-8 rounded-lg shadow-lg h-full">
               <h3 className="text-2xl font-heading font-bold text-primary mb-6">Conference Information</h3>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="text-secondary text-2xl mr-4">
                     <Mail className="h-6 w-6" />
                   </div>
                   <div>
-                    <h4 className="font-heading font-bold mb-1">Email</h4>
-                    <p className="text-neutral-600">doreen@zie.co.zw</p>
+                    <h4 className="font-heading font-bold mb-2 text-lg">Conference Secretariat</h4>
+                    <p className="text-neutral-600">
+                      <a href="mailto:doreen@zie.co.zw" className="hover:text-primary transition-colors">
+                        doreen@zie.co.zw
+                      </a>
+                    </p>
+                    <p className="text-sm text-neutral-500 mt-1">
+                      For registration and general inquiries
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="text-secondary text-2xl mr-4">
                     <Phone className="h-6 w-6" />
@@ -165,7 +172,7 @@ export default function Contact() {
                     <p className="text-neutral-600">+263 77 433 3937</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="text-secondary text-2xl mr-4">
                     <MapPin className="h-6 w-6" />
@@ -179,7 +186,7 @@ export default function Contact() {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="text-secondary text-2xl mr-4">
                     <Clock className="h-6 w-6" />
@@ -190,7 +197,7 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="mt-8">
                 <h4 className="font-heading font-bold mb-3">Follow Us</h4>
                 <div className="flex space-x-4">

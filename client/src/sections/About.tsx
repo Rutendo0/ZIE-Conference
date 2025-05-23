@@ -31,11 +31,14 @@ export default function About() {
             </div>
             <div>
               <h3 className="text-2xl font-heading font-bold text-primary mb-4">Innovation & Sustainability in Engineering</h3>
-              <p className="text-neutral-700 mb-6 leading-relaxed">
-                The Zimbabwe Institution of Engineers (ZIE) International Conference 2025 brings together engineers, researchers, industry leaders, and policymakers worldwide to address the challenges and opportunities in sustainable engineering practices.
+              <p className="text-neutral-700 mb-6 leading-relaxed text-lg">
+                The Zimbabwe Institution of Engineers (ZIE) International Conference 2025 is Zimbabwe's premier engineering event, uniting global experts, innovators, and industry leaders.
               </p>
               <p className="text-neutral-700 mb-6 leading-relaxed">
-                This premier event focuses on innovative engineering solutions contributing to Zimbabwe's development while embracing global sustainability goals.
+                <strong className="text-primary">Our Mission:</strong> To foster collaboration between engineers, researchers, and policymakers, driving sustainable development through innovative engineering solutions.
+              </p>
+              <p className="text-neutral-700 mb-6 leading-relaxed">
+                <strong className="text-primary">Our Focus:</strong> Addressing critical engineering challenges while promoting sustainable practices that align with both national development goals and global sustainability standards.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">

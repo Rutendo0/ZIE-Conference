@@ -22,15 +22,18 @@ export default function Hero() {
         }}
       >
         <div className="container mx-auto px-4 py-20 text-center text-white">
-          <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-4 leading-tight text-shadow">
-           The Zimbabwe Institution of Engineers <br />International Conference 2025
+          <h1 className="text-5xl lg:text-7xl font-heading font-bold mb-6 leading-tight text-shadow">
+            ZIE International Conference 2025
           </h1>
+          <h2 className="text-2xl lg:text-3xl mb-6 font-semibold text-accent">
+            Innovation & Sustainability in Engineering
+          </h2>
           <p className="text-xl lg:text-2xl mb-8 max-w-3xl mx-auto">
-            Innovation & Sustainability in Engineering: Building Zimbabwe's Future
+            Shaping Zimbabwe's Engineering Future Through Excellence
           </p>
-          <p className="text-lg mb-12">
-            November 25-28, 2025 | Elphant Hills Resort and Conference Centre
-          </p>
+          <div className="text-lg mb-12 bg-black bg-opacity-50 inline-block px-6 py-3 rounded-full">
+            <strong>November 25-28, 2025</strong> | Elephant Hills Resort and Conference Centre
+          </div>
           
           {/* Countdown Timer */}
           <div className="flex justify-center">
