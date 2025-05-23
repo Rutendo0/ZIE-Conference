@@ -15,7 +15,8 @@ export default function Footer() {
             <img 
               src="https://zie.org.zw/wp-content/uploads/2020/11/Logo.png" 
               alt="ZIE Logo" 
-              className="h-16 mb-4 bg-white p-2 rounded"
+              className="h-16 mb-4 bg-white p-4 rounded shadow-sm"
+              style={{ objectFit: 'contain' }}
             />
             <p className="mb-4">
               The Zimbabwe Institution of Engineers promotes excellence in the engineering profession through regulation, research, and professional development.

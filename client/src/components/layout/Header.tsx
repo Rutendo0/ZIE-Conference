@@ -33,9 +33,10 @@ export default function Header() {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
           <img 
-            src="https://zie.org.zw/wp-content/uploads/2020/11/Logo.png"
+            src="https://zie.org.zw/wp-content/uploads/2020/11/Logo.png" 
             alt="ZIE Logo" 
-            className="h-16 md:h-20 bg-white p-2 rounded"
+            className="h-16 md:h-20 bg-white p-4 rounded shadow-sm"
+            style={{ objectFit: 'contain' }}
           />
         </Link>
 
@@ -63,14 +64,14 @@ export default function Header() {
             Contact
           </button>
         </nav>
-        
+
         <Button 
           onClick={() => handleNavClick('register')}
           className="hidden lg:inline-block px-6 py-2 bg-accent text-white font-bold rounded-full hover:bg-opacity-90 transition-all"
         >
           Register Now
         </Button>
-        
+
         {/* Mobile menu button */}
         <Button 
           variant="ghost" 
