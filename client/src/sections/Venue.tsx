@@ -9,26 +9,26 @@ export default function Venue() {
           <h2 className="text-4xl font-heading font-bold text-primary mb-4">Conference Venue</h2>
           <div className="w-20 h-1 bg-secondary mx-auto mb-6"></div>
           <p className="max-w-3xl mx-auto text-neutral-600">
-            Join us at the prestigious Elephant Hills Resort and Conference Centre
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
-            <img 
-              src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-              alt="Harare International Conference Centre" 
-              className="rounded-lg shadow-lg w-full h-auto"
-            />
-          </div>
-          <div>
-            <h3 className="text-2xl font-heading font-bold text-primary mb-4">
-              Elephant Hills Resort and Conference Centre
-            </h3>
-            <p className="text-neutral-700 mb-6 leading-relaxed">
-              Located in the heart of Harare, the International Conference Centre offers world-class facilities and amenities to ensure a productive and enjoyable conference experience.
+              Join us at the prestigious Elephant Hills Resort and Conference Centre, Victoria Falls
             </p>
-            
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                alt="Elephant Hills Resort and Conference Centre" 
+                className="rounded-lg shadow-lg w-full h-auto"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-heading font-bold text-primary mb-4">
+                Elephant Hills Resort and Conference Centre
+              </h3>
+              <p className="text-neutral-700 mb-6 leading-relaxed">
+                Located in the heart of Victoria Falls, Zimbabwe, Elephant Hills Resort offers world-class conference facilities with breathtaking views of the Zambezi River. The venue combines luxury accommodation with state-of-the-art meeting spaces, perfect for our international conference.
+              </p>
+
             <div className="grid grid-cols-1 gap-6">
               <div className="flex items-start">
                 <div className="text-secondary text-2xl mr-4">
@@ -37,11 +37,11 @@ export default function Venue() {
                 <div>
                   <h4 className="font-heading font-bold mb-1">Address</h4>
                   <p className="text-neutral-600">
-                    Harare International Conference Centre, Gleneagles Road, Harare, Zimbabwe
+                    Elephant Hills Resort, Victoria Falls, Zimbabwe
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="text-secondary text-2xl mr-4">
                   <Hotel className="h-6 w-6" />
@@ -49,11 +49,11 @@ export default function Venue() {
                 <div>
                   <h4 className="font-heading font-bold mb-1">Accommodation</h4>
                   <p className="text-neutral-600">
-                    Special rates available at partner hotels within walking distance of the venue
+                    Luxurious rooms and suites available at the resort with special conference rates.
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="text-secondary text-2xl mr-4">
                   <Plane className="h-6 w-6" />
@@ -61,12 +61,12 @@ export default function Venue() {
                 <div>
                   <h4 className="font-heading font-bold mb-1">Travel Information</h4>
                   <p className="text-neutral-600">
-                    20 minutes from Robert Gabriel Mugabe International Airport
+                    Approximately 25 minutes from Victoria Falls International Airport
                   </p>
                 </div>
               </div>
             </div>
-            
+
             <div className="mt-8">
               <a href="https://www.google.com/maps/dir/?api=1&destination=Elephant+Hills+Resort+and+Conference+Centre+Victoria+Falls+Zimbabwe" target="_blank" rel="noopener noreferrer">
                 <Button className="inline-block px-6 py-2 bg-primary text-white font-bold rounded-full hover:bg-opacity-90 transition-all">
@@ -76,7 +76,7 @@ export default function Venue() {
             </div>
           </div>
         </div>
-        
+
         {/* Google Maps embed */}
         <div className="mt-16 h-96 rounded-lg shadow-lg overflow-hidden">
           <iframe 
