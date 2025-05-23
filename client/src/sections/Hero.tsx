@@ -15,13 +15,18 @@ export default function Hero() {
       <div 
         className="relative min-h-screen flex items-center justify-center" 
         style={{
-          backgroundImage: "url('/img/work/home.jpg')",
+          backgroundImage: "url('/attached_assets/home.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat"
         }}
       >
         <div className="container mx-auto px-4 py-20 text-center text-white">
+          <img 
+            src="https://www.zie.co.zw/assets/img/logo.png" 
+            alt="ZIE Logo" 
+            className="mx-auto mb-8 h-24 w-auto"
+          />
           <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-4 leading-tight">
            The Zimbabwe Institution of Engineers <br />International Conference 2025
           </h1>
