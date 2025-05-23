@@ -195,32 +195,31 @@ export default function Contact() {
                 <h4 className="font-heading font-bold mb-3">Follow Us</h4>
                 <div className="flex space-x-4">
                   <a 
-                    href="https://facebook.com" 
+                    href="https://www.facebook.com/zie.org.zw" 
                     className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-secondary transition-all"
                     aria-label="Facebook"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Facebook className="h-5 w-5" />
                   </a>
                   <a 
-                    href="https://twitter.com" 
+                    href="https://x.com/TheZimbabweIns1" 
                     className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-secondary transition-all"
                     aria-label="Twitter"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Twitter className="h-5 w-5" />
                   </a>
                   <a 
-                    href="https://linkedin.com" 
+                    href="https://www.linkedin.com/in/the-zimbabwe-institution-of-engineers-04b651206/" 
                     className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-secondary transition-all"
                     aria-label="LinkedIn"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Linkedin className="h-5 w-5" />
-                  </a>
-                  <a 
-                    href="https://instagram.com" 
-                    className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-secondary transition-all"
-                    aria-label="Instagram"
-                  >
-                    <Instagram className="h-5 w-5" />
                   </a>
                 </div>
               </div>
