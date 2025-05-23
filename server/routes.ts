@@ -51,7 +51,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       // Send notification to Doreen
       await sendEmailToAdmin({
-        to: 'doreen@example.com',
+        to: 'mikitayorutendo@gmail.com',
         subject: 'New Registration Pending Payment',
         text: `
           New registration details:
