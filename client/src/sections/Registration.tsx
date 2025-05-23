@@ -1,3 +1,7 @@
+The code modifies the payment contact dialog in the registration component to provide updated payment information and instructions.
+```
+
+``` replit_final_file
 import { useState } from "react";
 import { Check, X, Ticket } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -90,7 +94,7 @@ export default function Registration() {
   const [showRegistrationForm, setShowRegistrationForm] = useState(false);
   const [showTicket, setShowTicket] = useState(false);
   const [ticketData, setTicketData] = useState<TicketData | null>(null);
-  
+
   const [formData, setFormData] = useState<RegistrationFormData>({
     name: "",
     email: "",
@@ -99,7 +103,7 @@ export default function Registration() {
     jobTitle: "",
     pricingTier: ""
   });
-  
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -141,7 +145,7 @@ export default function Registration() {
     }));
     setShowRegistrationForm(true);
   };
-  
+
   const [showPaymentContact, setShowPaymentContact] = useState(false);
 
 const handleSubmit = (e: React.FormEvent) => {
@@ -153,7 +157,7 @@ const handlePaymentConfirmation = () => {
     registration.mutate(formData);
     setShowPaymentContact(false);
   };
-  
+
   const handleCloseTicket = () => {
     setShowTicket(false);
     setSelectedTier(null);
@@ -169,7 +173,7 @@ const handlePaymentConfirmation = () => {
             Secure your place at Zimbabwe's premier engineering conference
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {pricingTiers.map((tier) => (
             <div 
@@ -220,7 +224,7 @@ const handlePaymentConfirmation = () => {
             </div>
           ))}
         </div>
-        
+
         {/* Registration Form Dialog */}
         <Dialog open={showRegistrationForm} onOpenChange={setShowRegistrationForm}>
           <DialogContent className="sm:max-w-md">
@@ -230,7 +234,7 @@ const handlePaymentConfirmation = () => {
                 Please provide your information to complete your registration and receive your ticket.
               </DialogDescription>
             </DialogHeader>
-            
+
             <form onSubmit={handleSubmit} className="space-y-4 py-4">
               <div className="grid gap-4">
                 <div className="grid gap-2">
@@ -244,7 +248,7 @@ const handlePaymentConfirmation = () => {
                     required
                   />
                 </div>
-                
+
                 <div className="grid gap-2">
                   <Label htmlFor="email">Email Address</Label>
                   <Input
@@ -257,7 +261,7 @@ const handlePaymentConfirmation = () => {
                     required
                   />
                 </div>
-                
+
                 <div className="grid gap-2">
                   <Label htmlFor="phone">Phone Number</Label>
                   <Input
@@ -268,7 +272,7 @@ const handlePaymentConfirmation = () => {
                     placeholder="Your phone number"
                   />
                 </div>
-                
+
                 <div className="grid gap-2">
                   <Label htmlFor="organization">Organization</Label>
                   <Input
@@ -279,7 +283,7 @@ const handlePaymentConfirmation = () => {
                     placeholder="Your organization"
                   />
                 </div>
-                
+
                 <div className="grid gap-2">
                   <Label htmlFor="jobTitle">Job Title</Label>
                   <Input
@@ -291,7 +295,7 @@ const handlePaymentConfirmation = () => {
                   />
                 </div>
               </div>
-              
+
               <div className="flex justify-end">
                 <Button 
                   type="submit" 
@@ -304,14 +308,14 @@ const handlePaymentConfirmation = () => {
             </form>
           </DialogContent>
         </Dialog>
-        
+
         {/* Ticket Display Dialog */}
         <Dialog open={showTicket} onOpenChange={setShowTicket}>
           <DialogContent className="sm:max-w-md">
             <DialogHeader>
               <DialogTitle className="text-center text-2xl font-bold">Your Conference Ticket</DialogTitle>
             </DialogHeader>
-            
+
             {ticketData && (
               <div>
                 <Card className="border-2 border-primary overflow-hidden">
@@ -320,48 +324,48 @@ const handlePaymentConfirmation = () => {
                       <h3 className="font-bold text-lg">ZIE Conference 2025</h3>
                       <Ticket className="h-5 w-5" />
                     </div>
-                    
+
                     <div className="p-6 space-y-4">
                       <div className="text-center">
                         <div className="bg-secondary/20 py-3 rounded-md font-mono tracking-wide font-bold">
                           {ticketData.ticketNumber}
                         </div>
                       </div>
-                      
+
                       <div className="space-y-3">
                         <div>
                           <p className="text-sm text-gray-500">Attendee</p>
                           <p className="font-bold">{ticketData.name}</p>
                         </div>
-                        
+
                         <div>
                           <p className="text-sm text-gray-500">Email</p>
                           <p>{ticketData.email}</p>
                         </div>
-                        
+
                         <div>
                           <p className="text-sm text-gray-500">Ticket Type</p>
                           <p>{pricingTiers.find(tier => tier.id === ticketData.pricingTier)?.name || ticketData.pricingTier}</p>
                         </div>
-                        
+
                         <div>
                           <p className="text-sm text-gray-500">Event Date</p>
                           <p>November 25-28, 2025</p>
                         </div>
-                        
+
                         <div>
                           <p className="text-sm text-gray-500">Venue</p>
                           <p>Elephant Hills Resort and Conference Centre</p>
                         </div>
                       </div>
-                      
+
                       <div className="border-t border-gray-200 pt-4 text-sm text-gray-500">
                         <p>Please bring this ticket (printed or digital) to the conference for check-in.</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
-                
+
                 <div className="flex justify-center mt-4">
                   <Button 
                     onClick={handleCloseTicket}
@@ -381,17 +385,21 @@ const handlePaymentConfirmation = () => {
             <DialogHeader>
               <DialogTitle className="text-center text-2xl font-bold">Payment Information</DialogTitle>
               <DialogDescription className="text-center">
-                Please contact Doreen for payment processing:
+                Your registration has been submitted. Please contact Doreen for payment:
               </DialogDescription>
             </DialogHeader>
-            
+
             <div className="py-6">
               <div className="space-y-4 text-center">
-                <p>Contact: Doreen</p>
-                <p>Phone: +1234567890</p>
-                <p>Email: doreen@example.com</p>
+                <p>Registration details have been sent to:</p>
+                <p className="font-bold">Doreen Mutasa</p>
+                <p>Phone: +263 782 555 123</p>
+                <p>Email: doreen.mutasa@zie.org</p>
+                <p className="mt-4 text-sm text-gray-600">
+                  After your payment is confirmed, you will receive an email with your ticket.
+                </p>
               </div>
-              
+
               <div className="mt-6 flex justify-center gap-4">
                 <Button onClick={() => setShowPaymentContact(false)} variant="outline">
                   Cancel

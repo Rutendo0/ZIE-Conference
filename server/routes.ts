@@ -39,11 +39,27 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Generate a ticket number (format: ZIE-2025-XXXXX)
       const ticketNumber = `ZIE-2025-${Math.floor(10000 + Math.random() * 90000)}`;
       
-      // Create the registration with ticket information
+      // Create the registration with pending payment status
       const registration = await storage.createRegistration({
         ...registrationData,
         ticketNumber,
-        ticketIssued: true
+        ticketIssued: false,
+        paymentStatus: 'pending'
+      });
+
+      // Send notification to Doreen (you'll need to set up email service)
+      await sendEmailToAdmin({
+        to: 'doreen@example.com',
+        subject: 'New Registration Pending Payment',
+        text: `
+          New registration details:
+          Name: ${registrationData.name}
+          Email: ${registrationData.email}
+          Phone: ${registrationData.phone}
+          Organization: ${registrationData.organization}
+          Ticket Type: ${registrationData.pricingTier}
+          Ticket Number: ${ticketNumber}
+        `
       });
       
       res.status(201).json({ 
@@ -111,3 +127,45 @@ export async function registerRoutes(app: Express): Promise<Server> {
   const httpServer = createServer(app);
   return httpServer;
 }
+// Payment confirmation endpoint
+  app.post("/api/confirm-payment", async (req, res) => {
+    try {
+      const { ticketNumber, email } = req.body;
+      
+      const registration = await storage.updateRegistrationPayment(ticketNumber, email);
+      
+      if (registration) {
+        // Send confirmation email to attendee
+        await sendEmailToAttendee({
+          to: registration.email,
+          subject: 'ZIE Conference 2025 - Registration Confirmed',
+          text: `
+            Dear ${registration.name},
+            
+            Your payment has been confirmed and your registration is complete.
+            Ticket Number: ${registration.ticketNumber}
+            
+            Please keep this email for your records.
+            
+            Best regards,
+            ZIE Conference Team
+          `
+        });
+        
+        res.status(200).json({
+          success: true,
+          message: "Payment confirmed and ticket issued"
+        });
+      } else {
+        res.status(404).json({
+          success: false,
+          message: "Registration not found"
+        });
+      }
+    } catch (error) {
+      res.status(500).json({
+        success: false,
+        message: "Error confirming payment"
+      });
+    }
+  });
