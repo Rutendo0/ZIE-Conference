@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { scrollToElement } from "@/lib/utils";
 
 export default function Hero() {
-  const conferenceDate = new Date("October 15, 2025 09:00:00");
+  const conferenceDate = new Date("November 25, 2025 09:00:00");
   
   const handleClick = (id: string) => {
     scrollToElement(id);
