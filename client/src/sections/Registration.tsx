@@ -1,7 +1,3 @@
-The code modifies the payment contact dialog in the registration component to provide updated payment information and instructions.
-```
-
-``` replit_final_file
 import { useState } from "react";
 import { Check, X, Ticket } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -148,12 +144,12 @@ export default function Registration() {
 
   const [showPaymentContact, setShowPaymentContact] = useState(false);
 
-const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setShowPaymentContact(true);
   };
 
-const handlePaymentConfirmation = () => {
+  const handlePaymentConfirmation = () => {
     registration.mutate(formData);
     setShowPaymentContact(false);
   };
