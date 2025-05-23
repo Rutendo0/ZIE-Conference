@@ -35,7 +35,7 @@ export default function Header() {
           <img 
             src="https://www.zie.co.zw/assets/img/logo.png"
             alt="ZIE Logo" 
-            className="h-14"
+            className="h-16 md:h-20"
           />
         </Link>
 
