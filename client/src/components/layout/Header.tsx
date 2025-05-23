@@ -33,7 +33,7 @@ export default function Header() {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
           <img 
-            src="https://zie.org.zw/wp-content/uploads/2020/11/Logo.png" 
+            src="https://www.zie.co.zw/wp-content/themes/zimie/img/logo.svg" 
             alt="ZIE Logo" 
             className="h-16 md:h-20 bg-white p-2 rounded shadow-lg"
             style={{ objectFit: 'contain', maxWidth: '200px' }}
