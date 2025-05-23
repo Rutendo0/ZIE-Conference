@@ -24,7 +24,7 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="/attached_assets/about.jfif" 
+                src="/images/about.jfif" 
                 alt="Engineers collaborating at conference" 
                 className="rounded-lg shadow-lg w-full h-auto"
               />

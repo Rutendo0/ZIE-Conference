@@ -15,7 +15,7 @@ export default function Hero() {
       <div 
         className="relative min-h-screen flex items-center justify-center" 
         style={{
-          backgroundImage: "url('/attached_assets/home.jpg')",
+          backgroundImage: "url('/images/home.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat"
