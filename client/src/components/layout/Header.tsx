@@ -33,7 +33,7 @@ export default function Header() {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
           <img 
-            src="/public/img/work/logo.svg"
+            src="https://www.zie.co.zw/assets/img/logo.png"
             alt="ZIE Logo" 
             className="h-14"
           />
