@@ -49,7 +49,7 @@ export function Countdown({ date, className }: CountdownProps) {
 
   return (
     <div className={cn("grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8", className)}>
-      <div className="countdown-item bg-white bg-opacity-20 backdrop-blur-sm rounded-lg py-4 px-6">
+      <div className="countdown-item bg-white bg-opacity-30 backdrop-blur-md rounded-lg py-6 px-8 shadow-lg">
         <span className="text-4xl md:text-5xl font-bold text-black">
           {timeLeft.days.toString().padStart(2, '0')}
         </span>

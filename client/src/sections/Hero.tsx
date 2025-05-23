@@ -11,7 +11,7 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative">
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
       <div 
         className="relative min-h-screen flex items-center justify-center" 
         style={{
@@ -22,18 +22,19 @@ export default function Hero() {
         }}
       >
         <div className="container mx-auto px-4 py-20 text-center text-white">
-          <h1 className="text-5xl lg:text-7xl font-heading font-bold mb-6 leading-tight text-shadow">
-            ZIE International Conference 2025
-          </h1>
-          <h2 className="text-2xl lg:text-3xl mb-6 font-semibold text-accent">
-            Innovation & Sustainability in Engineering
-          </h2>
-          <p className="text-xl lg:text-2xl mb-8 max-w-3xl mx-auto">
-            Shaping Zimbabwe's Engineering Future Through Excellence
-          </p>
-          <div className="text-lg mb-12 bg-black bg-opacity-50 inline-block px-6 py-3 rounded-full">
-            <strong>November 25-28, 2025</strong> | Elephant Hills Resort and Conference Centre
-          </div>
+          <div className="bg-black bg-opacity-40 p-8 rounded-lg backdrop-blur-sm">
+            <h1 className="text-5xl lg:text-7xl font-heading font-bold mb-8 leading-tight text-shadow">
+              ZIE International Conference 2025
+            </h1>
+            <h2 className="text-2xl lg:text-3xl mb-8 font-semibold text-accent">
+              Innovation & Sustainability in Engineering
+            </h2>
+            <p className="text-xl lg:text-2xl mb-10 max-w-3xl mx-auto">
+              Shaping Zimbabwe's Engineering Future Through Excellence
+            </p>
+            <div className="text-lg mb-12 bg-black bg-opacity-50 inline-block px-8 py-4 rounded-full">
+              <strong>November 25-28, 2025</strong> | Elephant Hills Resort and Conference Centre
+            </div>
           
           {/* Countdown Timer */}
           <div className="flex justify-center">
