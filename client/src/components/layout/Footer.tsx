@@ -76,18 +76,18 @@ export default function Footer() {
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mt-1 mr-3 text-secondary" />
                 <span>
-                  Zimbabwe Institution of Engineers<br />
-                  Batanai Gardens, Block 4<br />
-                  Harare, Zimbabwe
+                  The Zimbabwe Institution of Engineers<br />
+                  256 Samora Machel Avenue<br />
+                  Eastlea, Harare
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-3 text-secondary" />
-                <span>+263 242 774 561</span>
+                <span>+263 77 433 3937</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-3 text-secondary" />
-                <span>conference2025@zie.co.zw</span>
+                <span>doreen@zie.co.zw</span>
               </li>
               <li className="flex items-start">
                 <Clock className="h-5 w-5 mt-1 mr-3 text-secondary" />
