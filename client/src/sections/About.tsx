@@ -24,7 +24,7 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                src="/img/work/About.png" 
                 alt="Engineers collaborating at conference" 
                 className="rounded-lg shadow-lg w-full h-auto"
               />
