@@ -152,7 +152,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-heading font-bold mb-1">Email</h4>
-                    <p className="text-neutral-600">conference2025@zie.co.zw</p>
+                    <p className="text-neutral-600">doreen@zie.co.zw</p>
                   </div>
                 </div>
                 
@@ -162,7 +162,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-heading font-bold mb-1">Phone</h4>
-                    <p className="text-neutral-600">+263 242 774 561</p>
+                    <p className="text-neutral-600">+263 77 433 3937</p>
                   </div>
                 </div>
                 
@@ -173,8 +173,8 @@ export default function Contact() {
                   <div>
                     <h4 className="font-heading font-bold mb-1">ZIE Office</h4>
                     <p className="text-neutral-600">
-                      Zimbabwe Institution of Engineers<br />
-                      Batanai Gardens, Block 4<br />
+                      The Zimbabwe Institution of Engineers<br />
+                      256 Samora Machel Avenue, Eastlea<br />
                       Harare, Zimbabwe
                     </p>
                   </div>
