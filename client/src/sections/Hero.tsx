@@ -11,7 +11,7 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative">
-      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       <div 
         className="relative min-h-screen flex items-center justify-center" 
         style={{
@@ -22,7 +22,12 @@ export default function Hero() {
         }}
       >
         <div className="container mx-auto px-4 py-20 text-center text-white">
-          <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-4 leading-tight">
+          <img 
+            src="https://www.zie.co.zw/assets/img/logo.png" 
+            alt="ZIE Logo" 
+            className="h-24 mx-auto mb-8"
+          />
+          <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-4 leading-tight text-shadow">
            The Zimbabwe Institution of Engineers <br />International Conference 2025
           </h1>
           <p className="text-xl lg:text-2xl mb-8 max-w-3xl mx-auto">
