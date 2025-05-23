@@ -50,25 +50,25 @@ export function Countdown({ date, className }: CountdownProps) {
   return (
     <div className={cn("grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8", className)}>
       <div className="countdown-item bg-white bg-opacity-20 backdrop-blur-sm rounded-lg py-4 px-6">
-        <span className="text-4xl md:text-5xl font-bold text-secondary">
+        <span className="text-4xl md:text-5xl font-bold text-red-500">
           {timeLeft.days.toString().padStart(2, '0')}
         </span>
-        <span className="text-sm uppercase mt-2">Days</span>
+        <span className="text-sm uppercase mt-2 text-red-500">Days</span>
       </div>
       <div className="countdown-item bg-white bg-opacity-20 backdrop-blur-sm rounded-lg py-4 px-6">
-        <span className="text-4xl md:text-5xl font-bold text-secondary">
+        <span className="text-4xl md:text-5xl font-bold text-red-500">
           {timeLeft.hours.toString().padStart(2, '0')}
         </span>
-        <span className="text-sm uppercase mt-2">Hours</span>
+        <span className="text-sm uppercase mt-2 text-red-500">Hours</span>
       </div>
       <div className="countdown-item bg-white bg-opacity-20 backdrop-blur-sm rounded-lg py-4 px-6">
-        <span className="text-4xl md:text-5xl font-bold text-secondary">
+        <span className="text-4xl md:text-5xl font-bold text-red-500">
           {timeLeft.minutes.toString().padStart(2, '0')}
         </span>
-        <span className="text-sm uppercase mt-2">Minutes</span>
+        <span className="text-sm uppercase mt-2 text-red-500">Minutes</span>
       </div>
       <div className="countdown-item bg-white bg-opacity-20 backdrop-blur-sm rounded-lg py-4 px-6">
-        <span className="text-4xl md:text-5xl font-bold text-secondary">
+        <span className="text-4xl md:text-5xl font-bold text-red-500">
           {timeLeft.seconds.toString().padStart(2, '0')}
         </span>
         <span className="text-sm uppercase mt-2">Seconds</span>
