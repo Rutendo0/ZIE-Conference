@@ -35,8 +35,8 @@ export default function Header() {
           <img 
             src="https://zie.org.zw/wp-content/uploads/2020/11/Logo.png" 
             alt="ZIE Logo" 
-            className="h-16 md:h-20 bg-white p-4 rounded shadow-sm"
-            style={{ objectFit: 'contain' }}
+            className="h-16 md:h-20 bg-white p-2 rounded shadow-lg"
+            style={{ objectFit: 'contain', maxWidth: '200px' }}
           />
         </Link>
 
