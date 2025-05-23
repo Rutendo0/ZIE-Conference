@@ -15,9 +15,10 @@ export default function Hero() {
       <div 
         className="relative min-h-screen flex items-center justify-center" 
         style={{
-          backgroundImage: "url('/img/work/home.png')",
+          backgroundImage: "url('/img/work/home.jpg')",
           backgroundSize: "cover",
-          backgroundPosition: "center"
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat"
         }}
       >
         <div className="container mx-auto px-4 py-20 text-center text-white">
