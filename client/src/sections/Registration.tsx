@@ -142,9 +142,16 @@ export default function Registration() {
     setShowRegistrationForm(true);
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const [showPaymentContact, setShowPaymentContact] = useState(false);
+
+const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setShowPaymentContact(true);
+  };
+
+const handlePaymentConfirmation = () => {
     registration.mutate(formData);
+    setShowPaymentContact(false);
   };
   
   const handleCloseTicket = () => {
@@ -365,6 +372,35 @@ export default function Registration() {
                 </div>
               </div>
             )}
+          </DialogContent>
+        </Dialog>
+
+        {/* Payment Contact Dialog */}
+        <Dialog open={showPaymentContact} onOpenChange={setShowPaymentContact}>
+          <DialogContent className="sm:max-w-md">
+            <DialogHeader>
+              <DialogTitle className="text-center text-2xl font-bold">Payment Information</DialogTitle>
+              <DialogDescription className="text-center">
+                Please contact Doreen for payment processing:
+              </DialogDescription>
+            </DialogHeader>
+            
+            <div className="py-6">
+              <div className="space-y-4 text-center">
+                <p>Contact: Doreen</p>
+                <p>Phone: +1234567890</p>
+                <p>Email: doreen@example.com</p>
+              </div>
+              
+              <div className="mt-6 flex justify-center gap-4">
+                <Button onClick={() => setShowPaymentContact(false)} variant="outline">
+                  Cancel
+                </Button>
+                <Button onClick={handlePaymentConfirmation}>
+                  I've Made Payment
+                </Button>
+              </div>
+            </div>
           </DialogContent>
         </Dialog>
       </div>
