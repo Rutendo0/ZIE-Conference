@@ -32,10 +32,10 @@ export default function About() {
             <div>
               <h3 className="text-2xl font-heading font-bold text-primary mb-4">Innovation & Sustainability in Engineering</h3>
               <p className="text-neutral-700 mb-6 leading-relaxed">
-                The Zimbabwe Institution of Engineers (ZIE) International Conference 2023 brings together engineers, researchers, industry leaders, and policymakers from around the world to address the challenges and opportunities in sustainable engineering practices.
+                The Zimbabwe Institution of Engineers (ZIE) International Conference 2025 brings together engineers, researchers, industry leaders, and policymakers worldwide to address the challenges and opportunities in sustainable engineering practices.
               </p>
               <p className="text-neutral-700 mb-6 leading-relaxed">
-                This premier event focuses on innovative engineering solutions that contribute to Zimbabwe's development while embracing global sustainability goals.
+                This premier event focuses on innovative engineering solutions contributing to Zimbabwe's development while embracing global sustainability goals.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
