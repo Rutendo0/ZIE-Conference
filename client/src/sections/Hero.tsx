@@ -1,3 +1,4 @@
+
 import { Countdown } from "@/components/ui/countdown";
 import { Button } from "@/components/ui/button";
 import { scrollToElement } from "@/lib/utils";
@@ -36,18 +37,19 @@ export default function Hero() {
               <strong>November 25-28, 2025</strong> | Elephant Hills Resort and Conference Centre
             </div>
           
-          {/* Countdown Timer */}
-          <div className="flex justify-center">
-            <Countdown date={conferenceDate} />
-          </div>
+            {/* Countdown Timer */}
+            <div className="flex justify-center">
+              <Countdown date={conferenceDate} />
+            </div>
           
-          <div className="mt-12 flex flex-col md:flex-row justify-center gap-4">
-            <Button 
-              className="px-8 py-3 bg-accent text-white font-bold rounded-full hover:bg-opacity-90 transition-all text-lg"
-              onClick={() => handleClick('register')}
-            >
-              Register Now
-            </Button>
+            <div className="mt-12 flex flex-col md:flex-row justify-center gap-4">
+              <Button 
+                className="px-8 py-3 bg-accent text-white font-bold rounded-full hover:bg-opacity-90 transition-all text-lg"
+                onClick={() => handleClick('register')}
+              >
+                Register Now
+              </Button>
+            </div>
           </div>
         </div>
       </div>
