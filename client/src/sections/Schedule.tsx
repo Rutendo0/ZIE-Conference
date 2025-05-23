@@ -16,12 +16,12 @@ interface DaySchedule {
 
 const scheduleData: Record<string, DaySchedule> = {
   day1: {
-    date: "October 15, 2025",
+    date: "November 25, 2025",
     items: [
       {
         time: "08:00 - 09:00",
         title: "Registration & Welcome Coffee",
-        location: "Harare International Conference Centre, Main Lobby"
+        location: "Elephant Hills Resort and Conference Centre, Main Lobby"
       },
       {
         time: "09:00 - 10:30",
@@ -53,7 +53,7 @@ const scheduleData: Record<string, DaySchedule> = {
     ]
   },
   day2: {
-    date: "October 16, 2025",
+    date: "November 26, 2025",
     items: [
       {
         time: "08:30 - 09:00",
@@ -95,7 +95,7 @@ const scheduleData: Record<string, DaySchedule> = {
     ]
   },
   day3: {
-    date: "October 17, 2025",
+    date: "November 27, 2025",
     items: [
       {
         time: "08:30 - 09:00",

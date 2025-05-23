@@ -15,20 +15,20 @@ export default function Hero() {
       <div 
         className="relative min-h-screen flex items-center justify-center" 
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')",
+          backgroundImage: "'/img/work/home.png'"",
           backgroundSize: "cover",
           backgroundPosition: "center"
         }}
       >
         <div className="container mx-auto px-4 py-20 text-center text-white">
           <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-4 leading-tight">
-            Zimbabwe Institution of Engineers <br />International Conference 2025
+           The Zimbabwe Institution of Engineers <br />International Conference 2025
           </h1>
           <p className="text-xl lg:text-2xl mb-8 max-w-3xl mx-auto">
             Innovation & Sustainability in Engineering: Building Zimbabwe's Future
           </p>
           <p className="text-lg mb-12">
-            October 15-17, 2025 | Harare International Conference Centre
+            November 25-28, 2025 | Elphant Hills Resort and Conference Centre
           </p>
           
           {/* Countdown Timer */}

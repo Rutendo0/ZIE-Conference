@@ -9,7 +9,7 @@ export default function Venue() {
           <h2 className="text-4xl font-heading font-bold text-primary mb-4">Conference Venue</h2>
           <div className="w-20 h-1 bg-secondary mx-auto mb-6"></div>
           <p className="max-w-3xl mx-auto text-neutral-600">
-            Join us at the prestigious Harare International Conference Centre
+            Join us at the prestigious Elephant Hills Resort and Conference Centre
           </p>
         </div>
         
@@ -23,7 +23,7 @@ export default function Venue() {
           </div>
           <div>
             <h3 className="text-2xl font-heading font-bold text-primary mb-4">
-              Harare International Conference Centre
+              Elephant Hills Resort and Conference Centre
             </h3>
             <p className="text-neutral-700 mb-6 leading-relaxed">
               Located in the heart of Harare, the International Conference Centre offers world-class facilities and amenities to ensure a productive and enjoyable conference experience.

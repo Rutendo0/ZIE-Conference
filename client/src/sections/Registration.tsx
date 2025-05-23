@@ -42,8 +42,8 @@ const pricingTiers: PricingTier[] = [
   {
     id: "early-bird",
     name: "Early Bird",
-    price: "$199",
-    deadline: "Available until August 15, 2025",
+    price: "$200",
+    deadline: "Available until October 15, 2025",
     features: [
       { name: "Full conference access", included: true },
       { name: "Conference materials", included: true },
@@ -56,8 +56,8 @@ const pricingTiers: PricingTier[] = [
   {
     id: "standard",
     name: "Standard",
-    price: "$299",
-    deadline: "Available until September 30, 2025",
+    price: "$500",
+    deadline: "Available until October 30, 2025",
     features: [
       { name: "Full conference access", included: true },
       { name: "Conference materials", included: true },
@@ -71,8 +71,8 @@ const pricingTiers: PricingTier[] = [
   {
     id: "premium",
     name: "Premium",
-    price: "$399",
-    deadline: "Available until October 10, 2025",
+    price: "$700",
+    deadline: "Available until November 10, 2025",
     features: [
       { name: "Full conference access", included: true },
       { name: "Conference materials", included: true },
@@ -339,12 +339,12 @@ export default function Registration() {
                         
                         <div>
                           <p className="text-sm text-gray-500">Event Date</p>
-                          <p>October 15-17, 2025</p>
+                          <p>November 25-28, 2025</p>
                         </div>
                         
                         <div>
                           <p className="text-sm text-gray-500">Venue</p>
-                          <p>Harare International Conference Centre</p>
+                          <p>Elephant Hills Resort and Conference Centre</p>
                         </div>
                       </div>
                       
