@@ -1,8 +1,10 @@
+
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSchema, insertRegistrationSchema, insertSubscriberSchema } from "@shared/schema";
 import { fromZodError } from "zod-validation-error";
+import { sendEmailToAdmin, sendEmailToAttendee } from "./email";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission API endpoint
@@ -47,7 +49,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         paymentStatus: 'pending'
       });
 
-      // Send notification to Doreen (you'll need to set up email service)
+      // Send notification to Doreen
       await sendEmailToAdmin({
         to: 'doreen@example.com',
         subject: 'New Registration Pending Payment',
@@ -64,7 +66,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       res.status(201).json({ 
         success: true, 
-        message: "Registration successful! Your ticket has been issued.", 
+        message: "Registration successful! Please wait for payment confirmation.", 
         registration: {
           id: registration.id,
           name: registration.name,
@@ -124,10 +126,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  const httpServer = createServer(app);
-  return httpServer;
-}
-// Payment confirmation endpoint
+  // Payment confirmation endpoint
   app.post("/api/confirm-payment", async (req, res) => {
     try {
       const { ticketNumber, email } = req.body;
@@ -169,3 +168,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
     }
   });
+
+  const httpServer = createServer(app);
+  return httpServer;
+}
