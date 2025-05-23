@@ -12,6 +12,21 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const contactData = insertContactSchema.parse(req.body);
       const contact = await storage.createContact(contactData);
+      
+      // Send email to Doreen
+      await sendEmailToAdmin({
+        to: 'doreen@zie.co.zw',
+        subject: `New Contact Form Message: ${contactData.subject}`,
+        text: `
+Name: ${contactData.name}
+Email: ${contactData.email}
+Subject: ${contactData.subject}
+
+Message:
+${contactData.message}
+        `
+      });
+
       res.status(201).json({ 
         success: true, 
         message: "Contact form submitted successfully", 
