@@ -26,7 +26,7 @@ export default function Hero() {
           <div className="bg-gradient-to-br from-black/60 to-black/40 p-12 rounded-3xl backdrop-blur-md border border-white/20 shadow-2xl max-w-6xl mx-auto">
             <div className="mb-6">
               <div className="inline-block bg-secondary/20 text-secondary px-6 py-2 rounded-full text-sm font-semibold mb-4 border border-secondary/30">
-                ZIMBABWE INSTITUTION OF ENGINEERS
+               The ZIMBABWE INSTITUTION OF ENGINEERS
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-8 leading-tight text-shadow bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text">
