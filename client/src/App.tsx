@@ -7,11 +7,13 @@ import Home from "@/pages/Home";
 import NotFoundPage from "@/pages/NotFoundPage";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import AdminConfirmation from "@/pages/AdminConfirmation";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/admin/confirm-payment" component={AdminConfirmation} />
       {/* Fallback to 404 */}
       <Route component={NotFoundPage} />
     </Switch>

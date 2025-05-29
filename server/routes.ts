@@ -4,7 +4,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSchema, insertRegistrationSchema, insertSubscriberSchema } from "@shared/schema";
 import { fromZodError } from "zod-validation-error";
-import { sendEmailToAdmin, sendEmailToAttendee } from "./email";
+import { sendEmailToAdmin, sendEmailToAttendee, sendWhatsAppMessage } from "./email";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission API endpoint
@@ -25,6 +25,21 @@ Subject: ${contactData.subject}
 Message:
 ${contactData.message}
         `
+      });
+
+      // Send WhatsApp message to Doreen
+      await sendWhatsAppMessage({
+        phone: '+263774333937',
+        message: `📩 NEW CONTACT MESSAGE - ZIE Conference
+
+👤 Name: ${contactData.name}
+📧 Email: ${contactData.email}
+📝 Subject: ${contactData.subject}
+
+💬 Message:
+${contactData.message}
+
+Please respond to the attendee directly.`
       });
 
       res.status(201).json({ 
@@ -64,7 +79,7 @@ ${contactData.message}
         paymentStatus: 'pending'
       });
 
-      // Send notification to Doreen
+      // Send notification to Doreen via email
       await sendEmailToAdmin({
         to: 'doreen@zie.co.zw',
         subject: 'New Registration Pending Payment',
@@ -77,10 +92,29 @@ ${contactData.message}
           Ticket Type: ${registrationData.pricingTier}
           Ticket Number: ${ticketNumber}
           
-          Doreen's Contact:
-          Email: doreen@zie.co.zw
-          Phone: +263774333937
+          After receiving payment, confirm it here:
+          ${process.env.NODE_ENV === 'development' ? 'http://localhost:5000' : 'https://your-repl-url.replit.app'}/admin/confirm-payment
+          
+          Use these details to confirm:
+          - Ticket Number: ${ticketNumber}
+          - Email: ${registrationData.email}
         `
+      });
+
+      // Send WhatsApp message to Doreen
+      await sendWhatsAppMessage({
+        phone: '+263774333937',
+        message: `🎯 NEW REGISTRATION - ZIE Conference 2025
+
+👤 Name: ${registrationData.name}
+📧 Email: ${registrationData.email}
+📱 Phone: ${registrationData.phone}
+🏢 Organization: ${registrationData.organization}
+🎫 Ticket Type: ${registrationData.pricingTier}
+🔢 Ticket Number: ${ticketNumber}
+
+💰 Please contact attendee for payment arrangements.
+✅ Confirm payment at: ${process.env.NODE_ENV === 'development' ? 'http://localhost:5000' : 'https://your-repl-url.replit.app'}/admin/confirm-payment`
       });
       
       res.status(201).json({ 

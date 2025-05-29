@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Clock, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Facebook, Twitter, Linkedin, Instagram, MessageCircle } from "lucide-react";
 import { apiRequest } from "@/lib/queryClient";
 
 interface ContactFormData {
@@ -60,6 +60,12 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     contactMutation.mutate(formData);
+  };
+
+  const handleWhatsAppClick = () => {
+    const message = encodeURIComponent("Hello Doreen, I have a question about the ZIE Conference 2025. ");
+    const whatsappUrl = `https://wa.me/263774333937?text=${message}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -170,6 +176,13 @@ export default function Contact() {
                   <div>
                     <h4 className="font-heading font-bold mb-1">Phone</h4>
                     <p className="text-neutral-600">+263 77 433 3937</p>
+                    <Button
+                      onClick={handleWhatsAppClick}
+                      className="mt-2 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors flex items-center gap-2 text-sm"
+                    >
+                      <MessageCircle className="h-4 w-4" />
+                      WhatsApp Quick Response
+                    </Button>
                   </div>
                 </div>
 
