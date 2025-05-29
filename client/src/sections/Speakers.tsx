@@ -19,7 +19,7 @@ const allSpeakers: Speaker[] = [
     id: 1,
     name: "Dr. Sarah Moyo",
     title: "Chief Engineer, Zimbabwe Water Authority",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700",
+    image: "https://images.unsplash.com/photo-1594736797933-d0dec4ba2d48?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700",
     socials: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
@@ -51,7 +51,7 @@ const allSpeakers: Speaker[] = [
     id: 4,
     name: "Dr. Tendai Chieza",
     title: "Lead Researcher, Renewable Energy Institute",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700",
     socials: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
@@ -72,7 +72,7 @@ const allSpeakers: Speaker[] = [
     id: 6,
     name: "Dr. Pamela Zimuto",
     title: "Senior Lecturer, University of Zimbabwe",
-    image: "https://images.unsplash.com/photo-1594736797933-d0dec4ba2d48?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700",
     socials: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
@@ -93,7 +93,7 @@ const allSpeakers: Speaker[] = [
     id: 8,
     name: "Dr. Lisa Muronda",
     title: "Head of Smart Cities Initiative, UNICEF",
-    image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700",
+    image: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700",
     socials: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
