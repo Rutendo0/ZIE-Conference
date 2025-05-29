@@ -388,11 +388,11 @@ export default function Registration() {
             <div className="py-6">
               <div className="space-y-4 text-center">
                 <p>Registration details have been sent to:</p>
-                <p className="font-bold">Rutendo</p>
-                <p>Phone: +263 77 797 9791</p>
-                <p>Email: mikitayorutendo@gmail.com</p>
+                <p className="font-bold">Doreen</p>
+                <p>Phone: +263 77 433 3937</p>
+                <p>Email: doreen@zie.co.zw</p>
                 <p className="mt-4 text-sm text-gray-600">
-                  After your payment is confirmed, you will receive an email with your ticket.
+                  Doreen will contact you directly to finalize payment arrangements. After your payment is confirmed, you will receive an email with your ticket.
                 </p>
               </div>
 

@@ -66,7 +66,7 @@ ${contactData.message}
 
       // Send notification to Doreen
       await sendEmailToAdmin({
-        to: 'mikitayorutendo@gmail.com',
+        to: 'doreen@zie.co.zw',
         subject: 'New Registration Pending Payment',
         text: `
           New registration details:
@@ -76,6 +76,10 @@ ${contactData.message}
           Organization: ${registrationData.organization}
           Ticket Type: ${registrationData.pricingTier}
           Ticket Number: ${ticketNumber}
+          
+          Doreen's Contact:
+          Email: doreen@zie.co.zw
+          Phone: +263774333937
         `
       });
       
