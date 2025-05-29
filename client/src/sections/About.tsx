@@ -28,7 +28,7 @@ export default function About() {
             <div className="order-2 lg:order-1">
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  src="https://sl.bing.net/eqYoLiwjMzc" 
                   alt="Professional Black engineers collaborating at conference" 
                   className="rounded-2xl shadow-2xl w-full h-auto transform hover:scale-105 transition-transform duration-500"
                 />
