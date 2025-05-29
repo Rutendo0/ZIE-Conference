@@ -19,7 +19,7 @@ const allSpeakers: Speaker[] = [
     id: 1,
     name: "Dr. Sarah Moyo",
     title: "Chief Engineer, Zimbabwe Water Authority",
-    image: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700",
     socials: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
@@ -30,7 +30,7 @@ const allSpeakers: Speaker[] = [
     id: 2,
     name: "Prof. John Makumbe",
     title: "Director, National Innovation Hub",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700",
     socials: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
@@ -41,7 +41,7 @@ const allSpeakers: Speaker[] = [
     id: 3,
     name: "Eng. David Mutasa",
     title: "CEO, Continental Engineering Group",
-    image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700",
+    image: "https://images.unsplash.com/photo-1566492031773-4f4e44671d66?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700",
     socials: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com"
@@ -51,7 +51,7 @@ const allSpeakers: Speaker[] = [
     id: 4,
     name: "Dr. Tendai Chieza",
     title: "Lead Researcher, Renewable Energy Institute",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700",
     socials: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
@@ -83,7 +83,7 @@ const allSpeakers: Speaker[] = [
     id: 7,
     name: "Eng. Thomas Chikuni",
     title: "Project Director, African Development Bank",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700",
     socials: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com"
@@ -93,7 +93,7 @@ const allSpeakers: Speaker[] = [
     id: 8,
     name: "Dr. Lisa Muronda",
     title: "Head of Smart Cities Initiative, UNICEF",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700",
+    image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700",
     socials: {
       linkedin: "https://linkedin.com",
       twitter: "https://twitter.com",
