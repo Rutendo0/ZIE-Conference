@@ -400,8 +400,11 @@ export default function Registration() {
                 <Button onClick={() => setShowPaymentContact(false)} variant="outline">
                   Cancel
                 </Button>
-                <Button onClick={handlePaymentConfirmation}>
-                  I've Made Payment
+                <Button 
+                  onClick={handlePaymentConfirmation}
+                  className="px-6 py-2 bg-primary text-white hover:bg-opacity-90"
+                >
+                  Confirm Registration
                 </Button>
               </div>
             </div>
