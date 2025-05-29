@@ -160,13 +160,17 @@ export default function Registration() {
   };
 
   return (
-    <section id="register" className="py-20 bg-primary text-white">
+    
+<section id="register" className="py-24 bg-gradient-to-br from-gray-50 to-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-heading font-bold mb-4">Register Now</h2>
-          <div className="w-20 h-1 bg-secondary mx-auto mb-6"></div>
-          <p className="max-w-3xl mx-auto text-neutral-200">
-            Secure your place at Zimbabwe's premier engineering conference
+        <div className="text-center mb-20">
+          <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-semibold mb-4">
+            SECURE YOUR SPOT
+          </div>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">Conference Registration</h2>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-secondary to-accent mx-auto rounded-full mb-8"></div>
+          <p className="max-w-4xl mx-auto text-gray-600 text-lg leading-relaxed">
+            Choose your registration tier and secure your spot at Zimbabwe's premier engineering conference. Early bird discounts available!
           </p>
         </div>
 
